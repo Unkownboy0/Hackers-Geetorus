@@ -256,7 +256,7 @@ if LOGGED_IN:
         model="gemini-2.5-flash",
         google_api_key=gemini_api_key,
         temperature=0.3,
-        max_tokens=1024,
+        max_tokens=4096,
     )
     prompt = ChatPromptTemplate.from_messages(
         [
