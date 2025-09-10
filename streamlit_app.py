@@ -376,24 +376,7 @@ if LOGGED_IN:
             file_name="geetorus_output.txt",
             mime="text/plain"
         )
-
-        def text_to_pdf(text):
-            pdf = FPDF()
-            pdf.add_page()
-            pdf.set_auto_page_break(auto=True, margin=15)
-            pdf.set_font("Arial", size=12)
-            for line in text.split('\n'):
-                pdf.cell(0, 10, line, ln=True)
-            pdf_bytes = pdf.output(dest='S').encode('latin1')
-            return pdf_bytes
-
         # Direct PDF download button (no suggestion, no extra button)
-        st.download_button(
-            label="⬇ Download as PDF",
-            data=text_to_pdf(last_bot_message),
-            file_name="geetorus_output.pdf",
-            mime="application/pdf"
-        )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
