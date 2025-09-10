@@ -4,7 +4,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from streamlit_lottie import st_lottie
 import requests
 import io
-from fpdf import FPDF
 import json
 
 # --- AUTHENTICATION ---
